@@ -36,12 +36,15 @@ Bypass any warning boxes, double-click the file, and allow it to run. On kali gi
 To see a list of processes, at the meterpreter > prompt, execute this command: ps ⇒ can see the fun.exe process running with pid 1156
 
 ![431915762-729dc34c-b5b1-4cc6-8770-22d2331caede](https://github.com/user-attachments/assets/9d271d68-4a2f-453c-ac8b-8bca86c8b4bb)
+
 The Metasploit shell is running inside the "fun.exe" process. If the user closes that process, or logs off, the connection will be lost. To become more persistent, we'll migrate to a process that will last longer. Let's migrate to the winlogon process. At the meterpreter > prompt, execute this command:
 
 ![431915851-d93cac14-3fc3-444b-8159-bc2e0bc66d3a](https://github.com/user-attachments/assets/f2ca75f7-2887-4336-ae2e-12c6013105cb)
+
 migrate -N explorer.exe at meterpreter > prompt, execute this command: netstat A list of network connections appears, including one to a remote port of 4444, as highlighted in the image below. Notice the "PID/Program name" value for this connection, which is redacted
 
 ![431915958-2cfb6dd1-773b-4b42-9cd5-6cbb204a3145](https://github.com/user-attachments/assets/5648e16b-3be2-4722-806d-4ddfbe014106)
+
 Post Exploitation: The target is now owned. Following are meterpreter commands for key capturing in the target machine keyscan_start Begins capturing keys typed in the target. On the Windows target, open Notepad and type in some text, such as your name.
 
 keyscan_dump Shows the keystrokes captured so far 
